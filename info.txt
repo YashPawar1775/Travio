@@ -1,0 +1,5 @@
+#Mongo Atlas Info
+SpaceName-Travio
+UserName-yvpawar2005
+Password-Yash@1775
+Connection String-mongodb+srv://yvpawar2005:<db_password>@travio.gzigrbm.mongodb.net/?appName=Travio

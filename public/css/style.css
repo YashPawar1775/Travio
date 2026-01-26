@@ -1,0 +1,421 @@
+body {
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+}
+
+.navbar {
+    height: 5rem;
+    background-color: white;
+}
+
+.nav-wrapper {
+    z-index: 1050;           
+}
+
+.fa-compass {
+    color: #fe424d;
+    font-size: 2rem;
+}
+
+.nav-link {
+    color: #222222 !important;
+}
+
+.f-info-links a {
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links a:hover {
+    text-decoration: underline;
+}
+
+.f-info-socials i {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.f-info-links,
+.f-info-socials,
+.f-info-brand {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-info {
+    display: flex;
+    height: 8rem;
+    background-color: #ebebeb;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+    text-align: center;
+}
+
+.listing-card {
+    border: none !important;
+    margin-bottom: 0.5rem;
+}
+
+.card-img-top {
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.card-body {
+    padding: 0 !important;
+}
+
+.card-text p {
+    font-weight: 400 !important;
+}
+
+.listing-link {
+    text-decoration: none;
+}
+
+.card-img-overlay {
+    opacity: 0;
+}
+
+.card-img-overlay:hover {
+    opacity: 0.2;
+    background-color: white;
+}
+
+.add-btn,
+.edit-btn{
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+.search-btn{
+    background-color: #fe424d !important;
+    border-color: #fe424d !important;
+    border-radius: 25px !important;
+    padding: 0 1rem 0 1rem !important;
+}
+
+.search-input{
+    border-radius: 25px !important;
+    padding:0.5rem 3rem 0.5rem 3rem !important;
+}
+
+.add-btn i,
+.edit-btn i,
+.delete-btn i,
+.search-btn i{
+    display: inline;
+    margin-right: 0.5rem;
+}
+
+.show-img {
+    height: 30vh;
+}
+
+.btns {
+    display: flex;
+}
+
+.show-card {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#map {
+    height: 400px;
+    width: 735px;
+    border-radius: 1rem !important;
+}
+
+.filters {
+    height: 5rem;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    padding-bottom: 0 !important;
+}
+
+.filters a {
+    text-decoration: none;
+    color: black;
+}
+
+.filter {
+    text-align: center;
+    opacity: 0.7;
+}
+
+.tax-toggle {
+    border: 1px solid black;
+    border-radius: 1rem;
+    height:3rem;
+    padding: 1rem;
+    opacity: 0.7;
+    margin-left: 3rem;        
+    display: flex;
+    align-items: center; 
+}
+
+.filter:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.tax-toggle:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.tax-info{
+    display: none;
+}
+
+@media (max-width: 767.98px) {
+    .navbar {
+        height: auto;
+        padding: 0.5rem 0;
+    }
+
+    .navbar-brand {
+        padding-left: 0.5rem;
+    }
+
+    .navbar-collapse {
+        background-color: white;
+        padding: 1rem;
+        border-top: 1px solid #ddd;
+    }
+
+    .navbar .d-flex {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+    }
+
+    .search-input {
+        width: 100%;
+        padding: 0.5rem 1rem !important;
+    }
+
+    .search-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .navbar-nav.ms-auto {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+
+    .navbar-nav.ms-auto .nav-link {
+        padding: 0.5rem 0;
+    }
+
+    .filters {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        height: auto;
+        padding: 0.5rem 0.5rem;
+        gap: 1rem;
+    }
+
+    .filters::-webkit-scrollbar {
+        display: none;
+    }
+
+    .filters {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .filter {
+        min-width: 70px;
+        flex-shrink: 0;
+    }
+
+    .filter i {
+        font-size: 1.2rem;
+    }
+
+    .filter p {
+        font-size: 0.75rem;
+        margin: 0;
+    }
+
+    .tax-toggle {
+        margin: 0.5rem auto;
+        width: 100%;
+        justify-content: center;
+        height: auto;
+        padding: 0.5rem 1rem;
+    }
+
+    .form-check-label {
+        font-size: 0.85rem;
+    }
+
+     #map {
+        width: 100% !important;
+        height: 300px;
+    }
+
+    .offset-3 {
+        margin-left: 0 !important;
+    }
+
+    .col-8,
+    .col-6 {
+        width: 100% !important;
+    }
+
+    .show-card {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .show-img {
+        height: 220px;
+    }
+
+    .card-body {
+        padding: 0.75rem !important;
+    }
+
+    .card.col-8 {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+
+    .card.col-8 {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+     
+    .col-8.offset-3 > .row {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+
+    .col-8.offset-3 .card.col-8 {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-wrapper > nav {
+        margin-bottom: 0 !important;
+    }
+
+    .nav-wrapper > nav:first-child {
+        border-bottom: 1px solid #ddd;
+    }
+
+    .nav-wrapper > nav:last-child {
+        border-bottom: 1px solid #ddd;
+    }
+
+    .filters {
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        white-space: nowrap;
+        gap: 0.75rem;
+        padding: 0.25rem 0.5rem;
+        height: auto;
+    }
+
+    .filters::-webkit-scrollbar {
+        display: none;
+    }
+
+    .filters {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .filter {
+        flex: 0 0 auto !important;
+        min-width: 64px;
+        text-align: center;
+    }
+
+    .filter i {
+        font-size: 1rem;
+    }
+
+    .filter p {
+        font-size: 0.7rem;
+        margin: 0;
+        white-space: nowrap;
+    }
+
+    .search-input {
+        padding: 0.35rem 1.5rem !important;
+        font-size: 0.85rem;
+    }
+
+    .search-btn {
+        padding: 0.35rem 0.75rem !important;
+        font-size: 0.85rem;
+    }
+
+    .tax-toggle {
+        height: 2.5rem;
+        padding: 0.25rem 0.75rem;
+        margin-left: 1rem;
+    }
+
+    #map {
+        width: 100% !important;
+        max-width: 100%;
+        height: 300px;
+    }
+
+    .tax-toggle {
+        gap: 0.5rem;
+    }
+
+    .tax-toggle .form-check-label {
+        white-space: nowrap;
+        font-size: 0.8rem;
+        line-height: 1.2;
+    }
+    
+    .nav-wrapper {
+        background-color: white;
+        position: relative;
+        z-index: 1050;
+    }
+
+    .nav-wrapper > nav {
+        background-color: white;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .nav-wrapper > nav + nav {
+        margin-top: 0 !important;
+    }
+
+}

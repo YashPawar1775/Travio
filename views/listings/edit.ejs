@@ -1,0 +1,98 @@
+<% layout('/layouts/boilerplate') -%>
+<div class="row mt-3">
+    <div class="col-8 offset-2">
+        <br>
+        <h3>Edit Listing</h3>
+        <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" class="needs-validation" novalidate enctype="multipart/form-data">
+            <div class="mb-3">
+                <lable for="title" class="form-label">Title</lable>
+                <input type="text" name="listing[title]" value="<%= listing.title %>" class="form-control" required>
+                 <div class="invalid-feedback">
+                    Please enter the title
+                </div>
+                <div class="valid-feedback">
+                    Good
+                </div>   
+            </div>
+            <div class="mb-3">
+                <lable for="description" class="form-label">Description</lable>
+                <textarea name="listing[description]" class="form-control" required><%= listing.description %></textarea>
+                <div class="invalid-feedback">
+                    Please enter the description
+                </div>
+                <div class="valid-feedback">
+                    Good
+                </div>
+            </div>
+            <div class="mb-3 col-4 row-5">
+                Original Image
+                <img src="<%= url %>" alt="listing image" class="card-img-top show-img">
+            </div>
+            <div class="mb-3">
+                <lable for="image" class="form-label">Upload Image</lable>
+                <input type="file" name="listing[image]" class="form-control">
+            </div>
+            <div class="row">
+                <div class="mb-3 col-4">
+                    <lable for="price" class="form-label">Price</lable>
+                    <input type="number" name="listing[price]" value="<%= listing.price %>" class="form-control" required>
+                    <div class="invalid-feedback">
+                        Please enter the price
+                    </div>
+                    <div class="valid-feedback">
+                        Good
+                    </div>
+                </div>
+                <div class="mb-3 col-8">
+                    <lable for="country" class="form-label">Country</lable>
+                    <input type="text" name="listing[country]" value="<%= listing.country%>" class="form-control" required>
+                    <div class="invalid-feedback">
+                        Please enter the country
+                    </div>
+                    <div class="valid-feedback">
+                        Good
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mb-3 col-8">
+                    <lable for="location" class="form-label">Location</lable>
+                    <input type="text" name="listing[location]" value="<%= listing.location %>" class="form-control" required>
+                    <div class="invalid-feedback">
+                        Please enter the location
+                    </div>
+                    <div class="valid-feedback">
+                        Good
+                    </div>
+                </div>
+                <div class="mb-3 col-4">
+                    <lable for="category" class="form-label">Category</lable>
+                    <select name="listing[category]" class="form-control" required>
+                        <option value="Trending" <%= listing.category === "Trending" ? "selected" : "" %>>Trending</option>
+                        <option value="Rooms" <%= listing.category === "Rooms" ? "selected" : "" %>>Rooms</option>
+                        <option value="City" <%= listing.category === "City" ? "selected" : "" %>>City</option>
+                        <option value="Mountain" <%= listing.category === "Mountain" ? "selected" : "" %>>Mountain</option>
+                        <option value="Castles" <%= listing.category === "Castles" ? "selected" : "" %>>Castles</option>
+                        <option value="Pools" <%= listing.category === "Pools" ? "selected" : "" %>>Pools</option>
+                        <option value="Camping" <%= listing.category === "Camping" ? "selected" : "" %>>Camping</option>
+                        <option value="Farms" <%= listing.category === "Farms" ? "selected" : "" %>>Farms</option>
+                        <option value="Artic" <%= listing.category === "Artic" ? "selected" : "" %>>Artic</option>
+                        <option value="Beach" <%= listing.category === "Beach" ? "selected" : "" %>>Beach</option>
+                        <option value="Ships" <%= listing.category === "Ships" ? "selected" : "" %>>Ships</option>
+                        <option value="Worship" <%= listing.category === "Worship" ? "selected" : "" %>>Worship</option>
+                        <option value="Safari" <%= listing.category === "Safari" ? "selected" : "" %>>Safari</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please select category
+                    </div>
+                    <div class="valid-feedback">
+                        Good
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-dark edit-btn mt-3"><i class="fa-solid fa-pencil"></i>Edit</button>
+            <br>
+            <br>
+        </form>
+    </div>
+</div>
